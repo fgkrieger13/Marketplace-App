@@ -38,7 +38,8 @@ const CartScreen = props => {
                 <Text style={styles.summarytext}>Total: <Text style={styles.amount}>${cartTotal.toFixed(2)}</Text></Text>
                 <Button color={Colors.accent}title='Order Now' 
                 disabled={cartItems.length === 0}
-                onPress = {() => {ordersActions.addOrder(cartItems, cartTotal)}}/>
+                onPress = {() => {
+                    dispatch(ordersActions.addOrder(cartItems, cartTotal))}}/>
             </View>
             <FlatList data={cartItems} keyExtractor={item => item.productId}
             renderItem={itemData => <CartItem 

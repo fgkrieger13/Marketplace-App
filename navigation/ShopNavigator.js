@@ -9,6 +9,7 @@ import ProductDetailsScreen from '../screens/shop/ProductDetailsScreen'
 import CartScreen from '../screens/shop/CartScreen'
 import OrdersScreen from '../screens/shop/OrdersScreen'
 import UserProductsScreen from '../screens/user/UserProductsScreen'
+import EditProductScreen from '../screens/user/EditProductScreen'
 import Colors from '../constants/Colors'
 import { Ionicons } from '@expo/vector-icons';
 
@@ -52,6 +53,7 @@ import { Ionicons } from '@expo/vector-icons';
 
     const AdminNavigator = createStackNavigator ({
         UserProducts: UserProductsScreen,
+        EditProduct: EditProductScreen,
     },{
         navigationOptions: {
             drawerIcon: drawerConfig => (<Ionicons name='ios-create'
